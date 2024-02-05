@@ -18,6 +18,7 @@
 
         <!-- dark mode button -->
         <DarkModeButton />
+        <LanguageButton />
       </q-toolbar>
     </q-header>
 
@@ -32,4 +33,5 @@
 
 <script setup lang="ts">
 import DarkModeButton from 'src/components/DarkModeButton.vue';
+import LanguageButton from 'src/components/LanguageButton.vue';
 </script>

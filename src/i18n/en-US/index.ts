@@ -4,4 +4,8 @@ export default {
     dark: 'Dark mode',
     system: 'Sync with system',
   },
+  languages: {
+    zhTW: '繁體中文(Traditional Chinese)',
+    enUS: 'English',
+  },
 };
