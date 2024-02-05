@@ -3,7 +3,8 @@
 
     <q-header
       elevated
-      class="tw-bg-slate-100 dark:tw-bg-slate-900 tw-text-gray-900 dark:tw-text-slate-200"
+      class="tw-bg-slate-100 dark:tw-bg-slate-900 tw-text-gray-900 dark:tw-text-slate-200
+        tw-bg-opacity-75"
       height-hint="98">
       <q-toolbar>
         <div class="tw-grow" />
