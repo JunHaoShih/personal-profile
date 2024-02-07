@@ -3,7 +3,7 @@
     tw-w-full">
     <div class="tw-py-8 tw-px-4 tw-mx-auto tw-max-w-screen-xl tw-text-center lg:py-16 lg:px-12">
       <a href="#"
-        class="tw-inline-flex tw-justify-between tw-item-center tw-py-1 tw-px-1 tw-pr-4
+        class="tw-inline-flex tw-justify-between tw-items-center tw-py-1 tw-px-1 tw-pr-4
         tw-mb-7 tw-text-sm tw-text-gray-700 tw-bg-gray-100 tw-rounded-full dark:tw-bg-gray-800
         dark:tw-text-white hover:tw-bg-gray-200 dark:hover:tw-bg-gray-700"
         role="alert"
@@ -15,12 +15,12 @@
           New
         </span>
         <span
-          class="tw-text-sm tw-font-medium tw-py-1"
+          class="tw-text-sm tw-font-medium"
         >
           Info! Click!
         </span>
         <svg
-          class="tw-ml-2 tw-w-5 tw-h-5 tw-my-1"
+          class="tw-ml-2 tw-w-5 tw-h-5"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg">
