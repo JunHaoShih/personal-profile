@@ -47,13 +47,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 interface PersonalInfo {
   icon: string,
   name: string,
   value: string,
 }
+
+const age = computed(() => {
+  const diffs = new Date().getTime() - new Date('1991-06-30T00:00:00').getTime();
+  return new Date(diffs).getUTCFullYear() - 1970;
+});
 
 const personalInfos = ref<PersonalInfo[]>([
   {
@@ -64,7 +69,7 @@ const personalInfos = ref<PersonalInfo[]>([
   {
     icon: 'calendar_month',
     name: 'Age:',
-    value: '32',
+    value: `${age.value}`,
   },
   {
     icon: 'cake',
