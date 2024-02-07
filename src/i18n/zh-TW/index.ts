@@ -6,6 +6,6 @@ export default {
   },
   languages: {
     zhTW: '繁體中文',
-    enUS: 'English(英文)',
+    enUS: 'English (英文)',
   },
 };

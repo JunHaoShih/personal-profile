@@ -9,7 +9,7 @@
       <q-toolbar>
         <div class="tw-grow" />
 
-        <q-tabs align="center">
+        <q-tabs align="center" class="tw-hidden sm:tw-block">
           <q-route-tab to="/page1" label="Page One" />
           <q-route-tab to="/page2" label="Page Two" />
           <q-route-tab to="/page3" label="Page Three" />

@@ -5,7 +5,7 @@ export default {
     system: 'Sync with system',
   },
   languages: {
-    zhTW: '繁體中文(Traditional Chinese)',
+    zhTW: '繁體中文 (Traditional Chinese)',
     enUS: 'English',
   },
 };

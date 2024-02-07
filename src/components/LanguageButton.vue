@@ -16,8 +16,8 @@
               clickable v-close-popup
               @click="setLanguage(language.lang)"
             >
-              <q-item-section>
-                <q-item-label>
+              <q-item-section class="tw-min-w-48">
+                <q-item-label class="tw-min-w-48">
                   {{ $t(language.name) }}
                 </q-item-label>
               </q-item-section>
