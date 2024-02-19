@@ -2,7 +2,7 @@
   <section class="tw-bg-white dark:tw-bg-gray-900">
     <div
       class="tw-gap-8 tw-items-center tw-py-8 tw-px-4 tw-mx-auto tw-max-w-screen-xl
-      xl:tw-gap-16 md:tw-grid md:tw-grid-cols-2 sm:py-16 lg:px-6"
+      xl:tw-gap-16 md:tw-grid md:tw-grid-cols-2 sm:tw-py-16 lg:tw-px-6"
     >
       <img
         class="tw-w-full dark:tw-hidden"
