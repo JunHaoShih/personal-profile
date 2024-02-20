@@ -37,7 +37,7 @@
         class="tw-mb-4 tw-text- 4xl tw-font-extrabold tw-tracking-tight tw-leading-none
         tw-text-gray-900 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-white"
       >
-        CompileError's personal space
+        {{ $t('main.title') }}
       </h1>
       <p
         class="tw-mb-8 tw-text-lg tw-font-normal tw-text-gray-500 lg:tw-text-xl sm:tw-px-16

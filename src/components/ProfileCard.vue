@@ -19,7 +19,7 @@
           class="tw-mb-4 tw-text-4xl tw-tracking-tight tw-font-extrabold tw-text-gray-900
           dark:tw-text-white"
         >
-          About me!
+          {{ $t('main.profile.title') }}
         </h2>
         <p
           class="tw-mb-6 tw-font-light tw-text-gray-500 md:tw-text-lg dark:text-gray-400"
@@ -47,7 +47,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const i18n = useI18n();
 
 interface PersonalInfo {
   icon: string,
@@ -55,31 +58,37 @@ interface PersonalInfo {
   value: string,
 }
 
+const birthDate = new Date('1991-06-30T00:00:00');
+
 const age = computed(() => {
-  const diffs = new Date().getTime() - new Date('1991-06-30T00:00:00').getTime();
+  const diffs = new Date().getTime() - birthDate.getTime();
   return new Date(diffs).getUTCFullYear() - 1970;
 });
 
-const personalInfos = ref<PersonalInfo[]>([
+const personalInfos = computed((): PersonalInfo[] => [
   {
     icon: 'location_on',
-    name: 'Location:',
-    value: 'Taichung',
+    name: i18n.t('main.profile.location'),
+    value: i18n.t('main.profile.taichung'),
   },
   {
     icon: 'calendar_month',
-    name: 'Age:',
+    name: i18n.t('main.profile.age'),
     value: `${age.value}`,
   },
   {
     icon: 'cake',
-    name: 'Birth date',
-    value: '1991, 6, 30',
+    name: i18n.t('main.profile.birthdate'),
+    value: birthDate.toLocaleDateString(i18n.locale.value, {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }),
   },
   {
     icon: 'school',
-    name: 'School',
-    value: 'National Central University',
+    name: i18n.t('main.profile.school'),
+    value: i18n.t('main.profile.ncu'),
   },
 ]);
 </script>

@@ -8,4 +8,16 @@ export default {
     zhTW: '繁體中文',
     enUS: 'English (英文)',
   },
+  main: {
+    title: '施俊浩的個人空間',
+    profile: {
+      title: '關於我',
+      location: '居住地',
+      taichung: '台中市',
+      age: '年齡: ',
+      birthdate: '生日: ',
+      school: '學歷: ',
+      ncu: '國立中央大學',
+    },
+  },
 };

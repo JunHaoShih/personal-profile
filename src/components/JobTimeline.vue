@@ -45,15 +45,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-
 interface Job {
   name: string,
   dateRange: string,
   description: string,
 }
 
-const jobs = ref<Job[]>([
+const jobs: Job[] = [
   {
     name: 'Latest job',
     dateRange: 'From a to b',
@@ -64,5 +62,5 @@ const jobs = ref<Job[]>([
     dateRange: 'From a to b',
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
-]);
+];
 </script>
