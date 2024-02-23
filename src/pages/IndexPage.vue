@@ -3,6 +3,7 @@
     <HeroSection />
     <ProfileCard />
     <JobTimeline />
+    <TechStackSection />
   </q-page>
 </template>
 
@@ -10,4 +11,5 @@
 import HeroSection from 'src/components/HeroSection.vue';
 import ProfileCard from 'src/components/ProfileCard.vue';
 import JobTimeline from 'src/components/JobTimeline.vue';
+import TechStackSection from 'src/components/TechStackSection.vue';
 </script>
