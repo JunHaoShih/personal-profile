@@ -79,6 +79,9 @@ import mysqlSvg from 'src/assets/mysql.svg';
 import microsoftSvg from 'src/assets/microsoft.svg';
 import oracleSvg from 'src/assets/oracle.svg';
 import firebaseSvg from 'src/assets/firebase.svg';
+import electronSvg from 'src/assets/electron.svg';
+import rabbitmqSvg from 'src/assets/rabbitmq.svg';
+import elasticSearchSvg from 'src/assets/elasticsearch.svg';
 
 interface SkillLevel {
   name: string,
@@ -179,14 +182,17 @@ const techGroups: TechGroup[] = [
     skiils: [
       {
         name: 'Electron',
+        src: electronSvg,
         percentage: '60%',
       },
       {
         name: 'RabbitMQ',
+        src: rabbitmqSvg,
         percentage: '50%',
       },
       {
         name: 'ElasticSearch',
+        src: elasticSearchSvg,
         percentage: '40%',
       },
     ],
