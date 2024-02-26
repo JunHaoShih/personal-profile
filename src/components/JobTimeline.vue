@@ -2,6 +2,14 @@
   <div
     class="tw-px-5 md:tw-max-w-2xl"
   >
+    <div class="tw-text-center tw-pb-10">
+      <h2
+        class="tw-text-3xl tw-font-bold tw-tracking-tight tw-text-gray-900 dark:tw-text-white
+        sm:tw-text-4xl lg:tw-text-5xl"
+      >
+        Experiences
+      </h2>
+    </div>
     <ol
       class="tw-relative tw-border-s tw-border-gray-200 dark:tw-border-gray-700"
     >
@@ -58,8 +66,18 @@ const jobs: Job[] = [
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
   {
-    name: 'Second job',
+    name: 'Place holder',
     dateRange: 'From a to b',
+    description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
+  },
+  {
+    name: 'Place holder',
+    dateRange: 'Ahhh',
+    description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
+  },
+  {
+    name: 'Place holder',
+    dateRange: 'Ahhh',
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
 ];

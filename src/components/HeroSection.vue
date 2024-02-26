@@ -1,6 +1,5 @@
 <template>
-  <section class="tw-bg-white dark:tw-bg-gradient-to-b dark:tw-from-slate-900 dark:tw-to-slate-800
-    tw-w-full">
+  <section class="tw-w-full">
     <div class="tw-py-8 tw-px-4 tw-mx-auto tw-max-w-screen-xl tw-text-center lg:py-16 lg:px-12">
       <a href="#"
         class="tw-inline-flex tw-justify-between tw-items-center tw-py-1 tw-px-1 tw-pr-4
@@ -34,7 +33,7 @@
         </svg>
       </a>
       <h1
-        class="tw-mb-4 tw-text- 4xl tw-font-extrabold tw-tracking-tight tw-leading-none
+        class="tw-mb-4 tw-text-4xl tw-font-extrabold tw-tracking-tight tw-leading-none
         tw-text-gray-900 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-white"
       >
         {{ $t('main.title') }}
