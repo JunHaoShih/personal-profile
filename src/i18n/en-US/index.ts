@@ -9,7 +9,8 @@ export default {
     enUS: 'English',
   },
   main: {
-    title: 'CompileError`s personal space',
+    name: 'CompileError',
+    title: '`s personal space',
     profile: {
       title: 'About me',
       location: 'Location: ',

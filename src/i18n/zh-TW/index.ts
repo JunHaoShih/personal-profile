@@ -9,7 +9,8 @@ export default {
     enUS: 'English (英文)',
   },
   main: {
-    title: '施俊浩的個人空間',
+    name: '施俊浩',
+    title: '的個人空間',
     profile: {
       title: '關於我',
       location: '居住地',

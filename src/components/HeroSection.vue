@@ -32,12 +32,20 @@
 
         </svg>
       </a>
-      <h1
-        class="tw-mb-4 tw-text-4xl tw-font-extrabold tw-tracking-tight tw-leading-none
-        tw-text-gray-900 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-white"
-      >
-        {{ $t('main.title') }}
-      </h1>
+      <div class="tw-flex tw-flex-row tw-items-center tw-justify-center">
+        <h1
+          class="tw-mb-4 tw-text-4xl tw-font-extrabold tw-tracking-tight tw-leading-none
+          tw-text-green-500 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-green-500"
+        >
+          {{ $t('main.name') }}
+        </h1>
+        <h1
+          class="tw-mb-4 tw-text-4xl tw-font-extrabold tw-tracking-tight tw-leading-none
+          tw-text-gray-900 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-white"
+        >
+          {{ $t('main.title') }}
+        </h1>
+      </div>
       <p
         class="tw-mb-8 tw-text-lg tw-font-normal tw-text-gray-500 lg:tw-text-xl sm:tw-px-16
         xl:tw-px-48 dark:tw-text-gray-400"
