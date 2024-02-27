@@ -1,11 +1,12 @@
 <template>
-  <q-page class="tw-flex tw-flex-col tw-items-center tw-justify-start tw-space-y-10">
-    <HeroSection class="tw-bg-white dark:tw-bg-gradient-to-b dark:tw-from-slate-900
-      dark:tw-to-slate-800"
+  <q-page class="tw-flex tw-flex-col tw-items-center tw-justify-start">
+    <HeroSection
+      class="tw-bg-gradient-to-b tw-from-neutral-200 tw-to-neutral-300
+      dark:tw-bg-gradient-to-b dark:tw-from-slate-900 dark:tw-to-slate-800"
     />
     <ProfileCard class="tw-bg-gradient-to-b tw-from-slate-800 tw-to-slate-900" />
-    <JobTimeline />
-    <TechStackSection />
+    <JobTimeline class="tw-mt-10" />
+    <TechStackSection class="tw-mt-10" />
   </q-page>
 </template>
 
