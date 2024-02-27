@@ -5,8 +5,10 @@
       elevated
       class="tw-bg-slate-100 dark:tw-bg-slate-900 tw-text-gray-900 dark:tw-text-slate-200
         dark:tw-bg-opacity-75 dark:tw-backdrop-blur-sm"
-      height-hint="98">
+      height-hint="98"
+    >
       <q-toolbar>
+        <q-icon name="face" size="md" class="tw-text-primary-600 tw-pl-1"/>
         <div class="tw-grow" />
 
         <q-tabs align="center" class="tw-hidden sm:tw-block">
