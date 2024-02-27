@@ -32,13 +32,14 @@
 
         </svg>
       </a>
-      <div class="tw-flex tw-flex-row tw-items-center tw-justify-center">
+      <div class="tw-flex tw-flex-col sm:tw-flex-row tw-items-center tw-justify-center">
         <h1
           class="tw-mb-4 tw-text-4xl tw-font-extrabold tw-tracking-tight tw-leading-none
           tw-text-green-500 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-green-500"
         >
           {{ $t('main.name') }}
         </h1>
+        <div class="tw-hidden tw-w-4 sm:tw-block" />
         <h1
           class="tw-mb-4 tw-text-4xl tw-font-extrabold tw-tracking-tight tw-leading-none
           tw-text-gray-900 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-white"
