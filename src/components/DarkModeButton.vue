@@ -1,6 +1,6 @@
 <template>
   <!-- dark mode button -->
-  <q-btn round>
+  <q-btn round class="before:tw-shadow-none">
     <template v-slot:default>
       <q-avatar
         size="30px"
