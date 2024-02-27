@@ -35,7 +35,7 @@
       <div class="tw-flex tw-flex-col sm:tw-flex-row tw-items-center tw-justify-center">
         <h1
           class="tw-mb-4 tw-text-4xl tw-font-extrabold tw-tracking-tight tw-leading-none
-          tw-text-green-500 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-green-500"
+          tw-text-orange-500 md:tw-text-5xl lg:tw-text-6xl dark:tw-text-green-500"
         >
           {{ $t('main.name') }}
         </h1>
@@ -72,7 +72,7 @@
       <a
         href="#"
         class="tw-inline-flex tw-justify-center tw-items-center tw-py-3 tw-px-5 tw-text-base
-        tw-font-medium tw-text-center tw-text-gray-900 tw-rounded-lg tw-border tw-border-gray-300
+        tw-font-medium tw-text-center tw-text-gray-900 tw-rounded-lg tw-border tw-border-gray-800
         hover:tw-bg-gray-100 focus:tw-ring-gray-100 dark:tw-text-white dark:tw-border-gray-700
         dark:hover:tw-bg-gray-700 dark:focus:tw-ring-gray-800"
       >
