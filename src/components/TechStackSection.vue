@@ -33,8 +33,8 @@
         >
           <div class="tw-flex tw-flex-row tw-items-center tw-mb-1 tw-gap-4">
             <q-img
-              v-if="skill.src"
-              :src="skill.src"
+              v-if="skill.icon"
+              :src="getIcon(skill.icon)"
               ratio="1"
               class="tw-w-5 tw-h-5"
             />
@@ -55,9 +55,9 @@
               {{ skill.percentage }}
             </span>
           </div>
-          <div class="tw-w-full tw-bg-gray-200 tw-rounded-full tw-h-2.5 dark:tw-bg-gray-700">
+          <div class="tw-w-full tw-bg-gray-200 tw-rounded-full tw-h-1.5 dark:tw-bg-gray-700">
             <div
-              class="tw-bg-blue-600 tw-h-2.5 tw-rounded-full"
+              class="tw-bg-blue-600 tw-h-1.5 tw-rounded-full"
               :style="`width: ${skill.percentage}`">
 
             </div>
@@ -82,10 +82,18 @@ import firebaseSvg from 'src/assets/firebase.svg';
 import electronSvg from 'src/assets/electron.svg';
 import rabbitmqSvg from 'src/assets/rabbitmq.svg';
 import elasticSearchSvg from 'src/assets/elasticsearch.svg';
+import quasarSvg from 'src/assets/quasar-logo.svg';
+import quasarDarkSvg from 'src/assets/quasar-logo-dark.svg';
+import { useDarkMode } from 'src/stores/darkModeStore';
+
+interface IconSrc {
+  src?: string,
+  srcDark?: string,
+}
 
 interface SkillLevel {
   name: string,
-  src?: string,
+  icon?: IconSrc,
   viewBox?: string,
   svgPath?: string,
   iconColor?: string,
@@ -97,18 +105,34 @@ interface TechGroup {
   skiils: SkillLevel[],
 }
 
+const darkMode = useDarkMode();
+
+function getIcon(iconSrc?: IconSrc): string | undefined {
+  if (!iconSrc) {
+    return undefined;
+  }
+  if (darkMode.isDark && iconSrc.srcDark) {
+    return iconSrc.srcDark;
+  }
+  return iconSrc.src;
+}
+
 const techGroups: TechGroup[] = [
   {
     name: 'Frontend',
     skiils: [
       {
         name: 'Vue3',
-        src: vueSvg,
+        icon: {
+          src: vueSvg,
+        },
         percentage: '60%',
       },
       {
         name: 'TypeScript',
-        src: tsSvg,
+        icon: {
+          src: tsSvg,
+        },
         percentage: '80%',
       },
       {
@@ -118,6 +142,14 @@ const techGroups: TechGroup[] = [
         iconColor: '#38bdf8',
         percentage: '60%',
       },
+      {
+        name: 'Quasar',
+        icon: {
+          src: quasarSvg,
+          srcDark: quasarDarkSvg,
+        },
+        percentage: '80%',
+      },
     ],
   },
   {
@@ -125,17 +157,23 @@ const techGroups: TechGroup[] = [
     skiils: [
       {
         name: 'C#',
-        src: csharpSvg,
+        icon: {
+          src: csharpSvg,
+        },
         percentage: '90%',
       },
       {
         name: '.NET',
-        src: dotnetSvg,
+        icon: {
+          src: dotnetSvg,
+        },
         percentage: '90%',
       },
       {
         name: 'NestJS',
-        src: nestjsSvg,
+        icon: {
+          src: nestjsSvg,
+        },
         percentage: '70%',
       },
       {
@@ -152,27 +190,37 @@ const techGroups: TechGroup[] = [
     skiils: [
       {
         name: 'PostgreSQL',
-        src: postgresqlSvg,
+        icon: {
+          src: postgresqlSvg,
+        },
         percentage: '75%',
       },
       {
         name: 'MySQL / MariaDB',
-        src: mysqlSvg,
+        icon: {
+          src: mysqlSvg,
+        },
         percentage: '70%',
       },
       {
         name: 'Microsoft SQL Server',
-        src: microsoftSvg,
+        icon: {
+          src: microsoftSvg,
+        },
         percentage: '70%',
       },
       {
         name: 'Oracle DB',
-        src: oracleSvg,
+        icon: {
+          src: oracleSvg,
+        },
         percentage: '70%',
       },
       {
         name: 'Firestore',
-        src: firebaseSvg,
+        icon: {
+          src: firebaseSvg,
+        },
         percentage: '60%',
       },
     ],
@@ -182,17 +230,23 @@ const techGroups: TechGroup[] = [
     skiils: [
       {
         name: 'Electron',
-        src: electronSvg,
+        icon: {
+          src: electronSvg,
+        },
         percentage: '60%',
       },
       {
         name: 'RabbitMQ',
-        src: rabbitmqSvg,
+        icon: {
+          src: rabbitmqSvg,
+        },
         percentage: '50%',
       },
       {
         name: 'ElasticSearch',
-        src: elasticSearchSvg,
+        icon: {
+          src: elasticSearchSvg,
+        },
         percentage: '40%',
       },
     ],
