@@ -25,6 +25,7 @@
     <q-page-container
       class="tw-bg-slate-50 dark:tw-bg-slate-800 tw-text-gray-900 dark:tw-text-slate-200"
     >
+      <MouseGradientPanel />
       <router-view />
     </q-page-container>
 
@@ -34,4 +35,5 @@
 <script setup lang="ts">
 import DarkModeButton from 'src/components/DarkModeButton.vue';
 import LanguageButton from 'src/components/LanguageButton.vue';
+import MouseGradientPanel from 'src/components/MouseGradientPanel.vue';
 </script>
