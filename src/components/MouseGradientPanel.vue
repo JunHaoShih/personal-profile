@@ -1,7 +1,7 @@
 <template>
   <div
     ref="gradientPanelRef"
-    class="tw-absolute tw-inset-0 tw-z-50"
+    class="tw-absolute tw-inset-0 tw-z-50 tw-pointer-events-none"
     :style="gradientStyle"
   />
 </template>
