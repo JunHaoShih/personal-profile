@@ -5,8 +5,8 @@
       xl:tw-gap-16 md:tw-grid md:tw-grid-cols-2 sm:tw-py-16 lg:tw-px-6"
     >
       <img
-        class="tw-w-full"
-        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg"
+        class="tw-w-full tw-rounded-full"
+        src="https://avatars.githubusercontent.com/u/17137300?v=4"
         alt="dashboard image"
       />
       <div class="tw-mt-4 md:tw-mt-0">
