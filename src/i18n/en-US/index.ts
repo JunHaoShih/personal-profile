@@ -11,7 +11,7 @@ export default {
   main: {
     name: 'CompileError`s',
     title: 'personal space',
-    description: 'A senior backend developer learning frontend',
+    description: 'An experienced backend developer branching out into frontend technologies.',
     resume: 'Resume',
     profile: {
       title: 'About me',
