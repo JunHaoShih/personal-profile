@@ -1,7 +1,9 @@
 <template>
   <section class="tw-w-full">
     <div class="tw-py-8 tw-px-4 tw-mx-auto tw-max-w-screen-xl tw-text-center lg:py-16 lg:px-12">
-      <a href="#"
+      <a href="https://github.com/JunHaoShih/personal-profile"
+        target="_blank"
+        rel="noopener noreferrer"
         class="tw-inline-flex tw-justify-between tw-items-center tw-py-1 tw-px-1 tw-pr-4
         tw-mb-7 tw-text-sm tw-text-gray-700 tw-bg-gray-100 tw-rounded-full dark:tw-bg-gray-800
         dark:tw-text-white hover:tw-bg-gray-200 dark:hover:tw-bg-gray-700"
@@ -16,7 +18,7 @@
         <span
           class="tw-text-sm tw-font-medium"
         >
-          Info! Click!
+          View source code
         </span>
         <svg
           class="tw-ml-2 tw-w-5 tw-h-5"
@@ -64,23 +66,34 @@
         tw-font-medium tw-text-center tw-text-white tw-rounded-lg tw-bg-primary-700
         hover:tw-bg-primary-800 focus:tw-ring-primary-300 dark:focus:tw-ring-primary-900"
       >
-        Learn more!
-        <q-icon name="arrow_forward"
+        Resume
+        <q-icon name="download"
           class="tw-ml-2 -tw-mr-1 tw-w-5 tw-h-5"
         />
       </a>
       <a
-        href="#"
+        href="https://github.com/JunHaoShih"
+        target="_blank"
+        rel="noopener noreferrer"
         class="tw-inline-flex tw-justify-center tw-items-center tw-py-3 tw-px-5 tw-text-base
         tw-font-medium tw-text-center tw-text-gray-900 tw-rounded-lg tw-border tw-border-gray-800
         hover:tw-bg-gray-100 focus:tw-ring-gray-100 dark:tw-text-white dark:tw-border-gray-700
         dark:hover:tw-bg-gray-700 dark:focus:tw-ring-gray-800"
       >
-        <q-icon name="info"
+        <q-img
+          :src="darkMode.isDark ? githubDarkSvg : githubSvg"
           class="tw-mr-2 -tw-ml-1 tw-w-5 tw-h-5"
         />
-        Not decided
+        GitHub
       </a>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import githubSvg from 'src/assets/github.svg';
+import githubDarkSvg from 'src/assets/github-dark.svg';
+import { useDarkMode } from 'src/stores/darkModeStore';
+
+const darkMode = useDarkMode();
+</script>
