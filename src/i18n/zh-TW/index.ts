@@ -11,6 +11,8 @@ export default {
   main: {
     name: '施俊浩',
     title: '的個人空間',
+    description: '一個正在學習前端的資深後端工程師',
+    resume: '個人履歷',
     profile: {
       title: '關於我',
       location: '居住地',

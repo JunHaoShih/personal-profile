@@ -53,7 +53,7 @@
         class="tw-mb-8 tw-text-lg tw-font-normal tw-text-gray-500 lg:tw-text-xl sm:tw-px-16
         xl:tw-px-48 dark:tw-text-gray-400"
       >
-        Put some description here
+        {{ $t('main.description') }}
       </p>
     </div>
     <div
@@ -66,7 +66,7 @@
         tw-font-medium tw-text-center tw-text-white tw-rounded-lg tw-bg-primary-700
         hover:tw-bg-primary-800 focus:tw-ring-primary-300 dark:focus:tw-ring-primary-900"
       >
-        Resume
+        {{ $t('main.resume') }}
         <q-icon name="download"
           class="tw-ml-2 -tw-mr-1 tw-w-5 tw-h-5"
         />
