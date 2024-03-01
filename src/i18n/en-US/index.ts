@@ -22,5 +22,12 @@ export default {
       school: 'School: ',
       ncu: 'National Central University',
     },
+    experience: 'Experience',
+    jobs: {
+      leantec: {
+        name: 'Leantec',
+        description: '',
+      },
+    },
   },
 };

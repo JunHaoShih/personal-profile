@@ -22,5 +22,12 @@ export default {
       school: '學歷: ',
       ncu: '國立中央大學',
     },
+    experience: '工作經歷',
+    jobs: {
+      leantec: {
+        name: '聯達智能',
+        description: '',
+      },
+    },
   },
 };

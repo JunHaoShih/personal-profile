@@ -7,7 +7,7 @@
         class="tw-text-3xl tw-font-bold tw-tracking-tight tw-text-gray-900 dark:tw-text-white
         sm:tw-text-4xl lg:tw-text-5xl"
       >
-        Experiences
+        {{ $t('main.experience') }}
       </h2>
     </div>
     <ol
@@ -40,7 +40,7 @@
           class="tw-block tw-mb-2 tw-text-sm tw-font-normal tw-leading-none tw-text-gray-400
           dark:tw-text-gray-500"
         >
-          {{ job.dateRange }}
+          {{ job.from }} - {{ job.to ?? 'Now' }}
         </time>
         <p
           class="tw-mb-4 tw-text-base tw-font-normal tw-text-gray-500 dark:tw-text-gray-400"
@@ -53,32 +53,53 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 interface Job {
   name: string,
   dateRange: string,
+  from: string,
+  to?: string,
   description: string,
 }
 
-const jobs: Job[] = [
+const i18n = useI18n();
+
+function toYearMonthFormat(date: Date) {
+  return date.toLocaleDateString(i18n.locale.value, {
+    year: 'numeric',
+    month: '2-digit',
+  });
+}
+
+const jobs = ref<Job[]>([
   {
-    name: 'Latest job',
+    name: i18n.t('main.jobs.leantec.name'),
     dateRange: 'From a to b',
+    from: toYearMonthFormat(new Date('2022-07-01T00:00:00')),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
   {
     name: 'Place holder',
     dateRange: 'From a to b',
+    from: toYearMonthFormat(new Date('2021-06-01T00:00:00')),
+    to: toYearMonthFormat(new Date('2022-06-01T00:00:00')),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
   {
     name: 'Place holder',
     dateRange: 'Ahhh',
+    from: toYearMonthFormat(new Date('2016-03-01T00:00:00')),
+    to: toYearMonthFormat(new Date('2021-05-01T00:00:00')),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
   {
     name: 'Place holder',
     dateRange: 'Ahhh',
+    from: toYearMonthFormat(new Date('2015-03-01T00:00:00')),
+    to: toYearMonthFormat(new Date('2014-03-01T00:00:00')),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
-];
+]);
 </script>
