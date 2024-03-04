@@ -25,7 +25,7 @@ export default {
     experience: 'Experience',
     jobs: {
       leantec: {
-        name: 'Leantec',
+        name: 'Leantec Intelligence Co., Ltd.',
         description: '',
       },
     },

@@ -27,7 +27,7 @@
           class="tw-flex tw-items-center tw-mb-1 tw-text-lg tw-font-semibold tw-text-gray-900
           dark:tw-text-white"
         >
-          {{ job.name }}
+          {{ $t(job.name) }}
           <span
             v-if="index === 0"
             class="tw-bg-blue-100 tw-text-blue-800 tw-text-sm tw-font-medium tw-me-2 tw-px-2.5
@@ -40,7 +40,7 @@
           class="tw-block tw-mb-2 tw-text-sm tw-font-normal tw-leading-none tw-text-gray-400
           dark:tw-text-gray-500"
         >
-          {{ job.from }} - {{ job.to ?? 'Now' }}
+          {{ toYearMonthFormat(job.from) }} - {{ job.to ? toYearMonthFormat(job.to) : 'Present' }}
         </time>
         <p
           class="tw-mb-4 tw-text-base tw-font-normal tw-text-gray-500 dark:tw-text-gray-400"
@@ -58,9 +58,8 @@ import { useI18n } from 'vue-i18n';
 
 interface Job {
   name: string,
-  dateRange: string,
-  from: string,
-  to?: string,
+  from: Date,
+  to?: Date,
   description: string,
 }
 
@@ -75,30 +74,26 @@ function toYearMonthFormat(date: Date) {
 
 const jobs = ref<Job[]>([
   {
-    name: i18n.t('main.jobs.leantec.name'),
-    dateRange: 'From a to b',
-    from: toYearMonthFormat(new Date('2022-07-01T00:00:00')),
+    name: 'main.jobs.leantec.name',
+    from: new Date('2022-07-01T00:00:00'),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
   {
     name: 'Place holder',
-    dateRange: 'From a to b',
-    from: toYearMonthFormat(new Date('2021-06-01T00:00:00')),
-    to: toYearMonthFormat(new Date('2022-06-01T00:00:00')),
+    from: new Date('2021-06-01T00:00:00'),
+    to: new Date('2022-06-01T00:00:00'),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
   {
     name: 'Place holder',
-    dateRange: 'Ahhh',
-    from: toYearMonthFormat(new Date('2016-03-01T00:00:00')),
-    to: toYearMonthFormat(new Date('2021-05-01T00:00:00')),
+    from: new Date('2016-03-01T00:00:00'),
+    to: new Date('2021-05-01T00:00:00'),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
   {
     name: 'Place holder',
-    dateRange: 'Ahhh',
-    from: toYearMonthFormat(new Date('2015-03-01T00:00:00')),
-    to: toYearMonthFormat(new Date('2014-03-01T00:00:00')),
+    from: new Date('2015-03-01T00:00:00'),
+    to: new Date('2016-03-01T00:00:00'),
     description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
   },
 ]);

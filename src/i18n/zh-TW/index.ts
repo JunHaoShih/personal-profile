@@ -25,7 +25,7 @@ export default {
     experience: '工作經歷',
     jobs: {
       leantec: {
-        name: '聯達智能',
+        name: '聯達智能股份有限公司',
         description: '',
       },
     },
