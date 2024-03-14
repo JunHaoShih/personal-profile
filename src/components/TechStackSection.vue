@@ -58,9 +58,8 @@
           <div class="tw-w-full tw-bg-gray-200 tw-rounded-full tw-h-1.5 dark:tw-bg-gray-700">
             <div
               class="tw-bg-blue-600 tw-h-1.5 tw-rounded-full"
-              :style="`width: ${skill.percentage}`">
-
-            </div>
+              :style="`width: ${skill.percentage}`"
+            />
           </div>
         </div>
       </div>
