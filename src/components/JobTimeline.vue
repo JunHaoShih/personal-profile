@@ -42,11 +42,14 @@
         >
           {{ toYearMonthFormat(job.from) }} - {{ job.to ? toYearMonthFormat(job.to) : 'Present' }}
         </time>
-        <p
-          class="tw-mb-4 tw-text-base tw-font-normal tw-text-gray-500 dark:tw-text-gray-400"
-        >
-          {{ job.description }}
-        </p>
+        <ul class="tw-list-disc tw-space-y-4">
+          <li class="tw-text-base tw-font-normal tw-text-gray-500 dark:tw-text-gray-400">
+            {{ job.description }}
+          </li>
+          <li class="tw-text-base tw-font-normal tw-text-gray-500 dark:tw-text-gray-400">
+            {{ job.description }}
+          </li>
+        </ul>
       </li>
     </ol>
   </div>
